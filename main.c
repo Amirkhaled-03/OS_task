@@ -18,16 +18,73 @@ int main(void)
         switch (op)
         {
         case 'a':
+            ans = userMenu();
+
+            if (ans == 1 || ans == 2)
+            {
+                printf("enter username: ");
+                scanf("%s", username);
+                if (ans == 1)
+                {
+                }
+                else if (ans == 2)
+                {
+                }
+            }
+            else
+            {
+                printf("this option NOT exist");
+            }
 
             break;
         case 'b':
-
+            ans = groupMenu();
+            if (ans == 1 || ans == 2)
+            {
+                printf("enter group name: ");
+                scanf("%s", groupname);
+                if (ans == 1)
+                {
+                }
+                else if (ans == 2)
+                {
+                }
+            }
+            else
+            {
+                printf("this option NOT exist");
+            }
             break;
         case 'c':
-
+            ans = ChangeAccountInfoMenu();
+            if (ans == 1 || ans == 2)
+            {
+                printf("enter username: ");
+                scanf("%s", username);
+                if (ans == 1)
+                {
+                    printf("enter new username: ");
+                    scanf("%s", newUserName);
+                    changeUserName(username, newUserName);
+                }
+                else if (ans == 2)
+                {
+                    changePassword(username);
+                }
+            }
+            else
+            {
+                printf("this option NOT exist");
+            }
             break;
         case 'd':
+            printf("enter username: ");
+            scanf("%s", username);
 
+            printf("enter username: ");
+            scanf("%s", groupname);
+
+            assignUserToGroup(username, groupname);
             break;
         case 'e':
             printf("exit successfully");
