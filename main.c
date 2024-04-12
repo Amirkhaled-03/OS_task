@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "menus.c"
+#include "functions.c"
 #define MAX 100
 
 int main(void)
@@ -17,36 +18,40 @@ int main(void)
 
         switch (op)
         {
-        case 'a':
-            ans = userMenu();
+        
 
+        case 'a': // Manage User
+            ans = userMenu();
             if (ans == 1 || ans == 2)
             {
                 printf("enter username: ");
                 scanf("%s", username);
-                if (ans == 1)
+                if (ans == 1) // add user
                 {
+                    AddUser(username);
                 }
-                else if (ans == 2)
+                else // del user
                 {
+                    DelUser(username);
                 }
             }
             else
             {
                 printf("this option NOT exist");
             }
-
             break;
-        case 'b':
+        
+        
+        case 'b': // Manage Group
             ans = groupMenu();
             if (ans == 1 || ans == 2)
             {
                 printf("enter group name: ");
                 scanf("%s", groupname);
-                if (ans == 1)
+                if (ans == 1) // add group
                 {
                 }
-                else if (ans == 2)
+                else // del group
                 {
                 }
             }
@@ -55,21 +60,23 @@ int main(void)
                 printf("this option NOT exist");
             }
             break;
-        case 'c':
+        
+
+        case 'c': // change acc info
             ans = ChangeAccountInfoMenu();
             if (ans == 1 || ans == 2)
             {
                 printf("enter username: ");
                 scanf("%s", username);
-                if (ans == 1)
+                if (ans == 1) // username
                 {
                     printf("enter new username: ");
                     scanf("%s", newUserName);
-                    changeUserName(username, newUserName);
+                    ChangeUserName(username, newUserName);
                 }
-                else if (ans == 2)
+                else // password
                 {
-                    changePassword(username);
+                    ChangePassword(username);
                 }
             }
             else
@@ -77,16 +84,20 @@ int main(void)
                 printf("this option NOT exist");
             }
             break;
-        case 'd':
+
+
+        case 'd': // assign user to group
             printf("enter username: ");
             scanf("%s", username);
 
             printf("enter username: ");
             scanf("%s", groupname);
 
-            assignUserToGroup(username, groupname);
+            AssignUser(username, groupname);
             break;
-        case 'e':
+
+
+        case 'e': // exit
             printf("exit successfully");
             break;
 
