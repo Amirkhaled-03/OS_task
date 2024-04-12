@@ -1,44 +1,67 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-Execute(char *command)
+void Execute(char *command)
 {
     system(command);
 }
 
-
-AddUser(char *userName)
+void AddUser(char *userName)
 {
     char command[500];
-    strcpy(command,"sudo useradd ");
-    strcat(command,userName);
+    strcpy(command, "sudo useradd ");
+    strcat(command, userName);
     Execute(command);
 }
 
-DelUser(char *userName)
+void DelUser(char *userName)
 {
     char command[500];
-    strcpy(command,"sudo userdel ");
-    strcat(command,userName);
+    strcpy(command, "sudo userdel ");
+    strcat(command, userName);
     Execute(command);
 }
 
-ChangePass(char *userName)
+void ChangePassword(char *userName)
 {
     char command[500];
-    strcpy(command,"sudo passwd ");
-    strcat(command,userName);
+    strcpy(command, "sudo passwd ");
+    strcat(command, userName);
     Execute(command);
 }
 
-AssignUser(char *userName, char *groupName)
+void AssignUser(char *userName, char *groupName)
 {
     char command[500];
-    strcpy(command,"sudo usermod -a -G ");
-    strcat(command,groupName);
+    strcpy(command, "sudo usermod -a -G ");
+    strcat(command, groupName);
     strcat(command, " ");
-    strcat(command,userName);
+    strcat(command, userName);
     Execute(command);
 }
 
+void AddGroup(char *groupName)
+{
+    char command[500];
+    strcpy(command, "sudo groupadd ");
+    strcat(command, groupName);
+    Execute(command);
+}
+
+void DeleteGroup(char *groupName)
+{
+    char command[500];
+    strcpy(command, "sudo groupdel ");
+    strcat(command, groupName);
+    Execute(command);
+}
+
+void ChangeUserName(char *oldUsername, char *newUsername)
+{
+    char command[500];
+    strcpy(command, "sudo usermod -l ");
+    strcat(command, newUsername);
+    strcat(command, " ");
+    strcat(command, oldUsername);
+    Execute(command);
+}

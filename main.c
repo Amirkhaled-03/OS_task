@@ -18,7 +18,6 @@ int main(void)
 
         switch (op)
         {
-        
 
         case 'a': // Manage User
             ans = userMenu();
@@ -40,8 +39,7 @@ int main(void)
                 printf("this option NOT exist");
             }
             break;
-        
-        
+
         case 'b': // Manage Group
             ans = groupMenu();
             if (ans == 1 || ans == 2)
@@ -50,9 +48,11 @@ int main(void)
                 scanf("%s", groupname);
                 if (ans == 1) // add group
                 {
+                    AddGroup(groupname);
                 }
                 else // del group
                 {
+                    DeleteGroup(groupname);
                 }
             }
             else
@@ -60,7 +60,6 @@ int main(void)
                 printf("this option NOT exist");
             }
             break;
-        
 
         case 'c': // change acc info
             ans = ChangeAccountInfoMenu();
@@ -85,17 +84,15 @@ int main(void)
             }
             break;
 
-
         case 'd': // assign user to group
             printf("enter username: ");
             scanf("%s", username);
 
-            printf("enter username: ");
+            printf("enter groupname: ");
             scanf("%s", groupname);
 
             AssignUser(username, groupname);
             break;
-
 
         case 'e': // exit
             printf("exit successfully");
