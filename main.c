@@ -5,7 +5,6 @@
 #include "menus.c"
 #define MAX 100
 
-// gcc -o main main.c user.c
 int main(void)
 {
     char op;
