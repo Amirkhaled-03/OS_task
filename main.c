@@ -21,17 +21,25 @@ int main(void)
 
         case 'a': // Manage User
             ans = userMenu();
-            if (ans == 1 || ans == 2)
+            if (ans == 1 || ans == 2 || ans == 3)
             {
-                printf("enter username: ");
-                scanf("%s", username);
+                if (ans != 3)
+                {
+                    printf("enter username: ");
+                    scanf("%s", username);
+                }
+
                 if (ans == 1) // add user
                 {
                     AddUser(username);
                 }
-                else // del user
+                else if (ans == 2) // del user
                 {
                     DelUser(username);
+                }
+                else
+                {
+                    ListUsers();
                 }
             }
             else
@@ -42,17 +50,24 @@ int main(void)
 
         case 'b': // Manage Group
             ans = groupMenu();
-            if (ans == 1 || ans == 2)
+            if (ans == 1 || ans == 2 || ans == 3)
             {
-                printf("enter group name: ");
-                scanf("%s", groupname);
+                if (ans != 3)
+                {
+                    printf("enter group name: ");
+                    scanf("%s", groupname);
+                }
                 if (ans == 1) // add group
                 {
                     AddGroup(groupname);
                 }
-                else // del group
+                else if (ans == 2) // del group
                 {
                     DeleteGroup(groupname);
+                }
+                else
+                {
+                    ListGroups();
                 }
             }
             else

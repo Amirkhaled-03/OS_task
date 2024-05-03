@@ -19,6 +19,7 @@ int userMenu()
     int ans;
     printf("1 => add user\n");
     printf("2 => delete user\n");
+    printf("3 => list user\n");
     printf("answer: ");
     scanf("%i", &ans);
 
@@ -30,6 +31,7 @@ int groupMenu()
     int ans;
     printf("1 => add group\n");
     printf("2 => delete group\n");
+    printf("3 => list groups\n");
     printf("answer: ");
     scanf("%i", &ans);
 
