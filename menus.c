@@ -3,6 +3,7 @@
 char menu()
 {
     char ans;
+    printf("select an option to do:\n");
     printf("a. Manage users.\n");
     printf("b. Manage groups.\n");
     printf("c. Change account information (username and/or password)\n");
@@ -17,9 +18,10 @@ char menu()
 int userMenu()
 {
     int ans;
-    printf("1 => add user\n");
+    printf("\n1 => add user\n");
     printf("2 => delete user\n");
     printf("3 => list user\n");
+    printf("0 => back\n");
     printf("answer: ");
     scanf("%i", &ans);
 
@@ -29,9 +31,10 @@ int userMenu()
 int groupMenu()
 {
     int ans;
-    printf("1 => add group\n");
+    printf("\n1 => add group\n");
     printf("2 => delete group\n");
     printf("3 => list groups\n");
+    printf("0 => back\n");
     printf("answer: ");
     scanf("%i", &ans);
 
@@ -41,8 +44,9 @@ int groupMenu()
 int ChangeAccountInfoMenu()
 {
     int ans;
-    printf("1 => change username\n");
+    printf("\n1 => change username\n");
     printf("2 => change password\n");
+    printf("0 => back\n");
     printf("answer: ");
     scanf("%i", &ans);
 

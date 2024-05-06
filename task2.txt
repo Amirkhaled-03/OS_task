@@ -1,0 +1,40 @@
+# **Name: task2**
+
+## ** SYNOPSIS: User manager **
+
+### DESCRIPTION : 
+   The process_manager program facilitates interactive process management, offering users the following options:
+
+1. Add User
+
+  -m 
+       make home directory to the user
+2. Delete User
+
+   -r 
+       delete the user directory
+
+3. List Users
+
+    list all the users
+4. Add group 
+5. Delete group
+6. List groups
+
+  list all the groups
+7. Change account information
+ * username 
+ 
+        -l, --login
+         specify a new login name for the user
+ * password
+8. Assign specific users to specific groups. 
+
+    -a, --append
+       add the user to the specified group without rem, oving the user from any other groups.
+    -G, --Group
+       specifies the group or groups to which the user should be added or removed
+
+
+
+##### **AUTHOR:the team**
