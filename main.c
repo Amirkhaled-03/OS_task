@@ -36,7 +36,7 @@ int main(void)
                         printf("Command execution failed\n");
                 }
                 else
-                    printf("this username is exist CAN NOT add user with this username");
+                    printf("this username already exists CAN NOT add user with this username");
 
                 break;
 
@@ -51,7 +51,7 @@ int main(void)
                         printf("Command execution failed\n");
                 }
                 else
-                    printf("this username is NOT exist CAN NOT delete");
+                    printf("this username does NOT exist CAN NOT delete");
                 break;
 
             case 3: // list users
@@ -140,8 +140,8 @@ int main(void)
                     else
                         printf("the new user name is exist select other username\n");
                 }
-                else
-                    printf("there is NO user name with is name\n");
+                else 
+                  printf("there is NO user name with this name\n");
 
                 break;
 
@@ -153,14 +153,14 @@ int main(void)
                 {
                     if (ChangePassword(username) == 0)
                     {
-                        printf("password changed successfully");
+                        printf("password changed successfully"); 
                     }
-                    else
-                        printf("Command execution failed\n");
+                      else
+                            printf("Command execution failed\n");
                 }
                 else
-                    printf("this username is NOT exist CAN NOT change password");
-
+                  printf("this username is NOT exist CAN NOT change password");
+          
                 break;
 
             case 0: // back
@@ -194,7 +194,7 @@ int main(void)
             break;
 
         default:
-            printf("this option NOT exist");
+            printf("this option NOT exist\n");
             break;
         }
 

@@ -32,6 +32,7 @@ int DelUser(char *userName)
 
     strcpy(command, "sudo userdel -r "); // -r delete the user directory
     strcat(command, userName);
+    strcat(command, " >/dev/null 2>&1");
     return Execute(command);
 }
 
